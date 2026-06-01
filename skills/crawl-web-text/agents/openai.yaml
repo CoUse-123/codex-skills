@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crawl Web Text"
+  short_description: "Extract clean text from public webpages"
+  default_prompt: "Use $crawl-web-text to extract clean text from a public webpage URL."
