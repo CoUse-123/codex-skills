@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Validator"
+  short_description: "Validate repository skill conventions offline"
+  default_prompt: "Use $skill-validator to validate all Codex skills in this repository."

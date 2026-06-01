@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Publisher"
+  short_description: "Publish repository changes to GitHub safely"
+  default_prompt: "Use $github-publisher to prepare a safe GitHub publish workflow for this repository."

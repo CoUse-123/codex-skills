@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Scaffolder"
+  short_description: "Create standard Codex skill skeletons"
+  default_prompt: "Use $skill-scaffolder to create a new Codex skill skeleton in this repository."

@@ -12,10 +12,9 @@ the skill packages.
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   ├── folder-plan.md
-│   └── release-checklist.md
+│   └── folder-plan.md
 ├── skills/
-│   └── crawl-web-text/
+│   ├── crawl-web-text/
 │       ├── SKILL.md
 │       ├── agents/
 │       │   └── openai.yaml
@@ -23,16 +22,36 @@ the skill packages.
 │       │   └── extract_web_text.py
 │       └── references/
 │           └── extraction-guidelines.md
+│   ├── skill-scaffolder/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   └── scripts/scaffold_skill.py
+│   ├── skill-validator/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   └── scripts/validate_skills.py
+│   └── github-publisher/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       └── references/
+│           ├── publish-workflow.md
+│           └── troubleshooting.md
 ├── tests/
-│   └── crawl-web-text/
+│   ├── crawl-web-text/
 │       ├── fixtures/
 │       │   └── sample-page.html
 │       └── test_extract_web_text.py
+│   ├── skill-scaffolder/
+│   │   └── test_scaffold_skill.py
+│   ├── skill-validator/
+│   │   └── test_validate_skills.py
+│   └── github-publisher/
+│       └── test_github_publisher.py
 └── tools/
+    ├── run_tests.py
+    ├── validate_skills.py
     └── validate_skills.sh
 ```
-
-## Directory Responsibilities
 
 ## Directory Responsibilities
 
@@ -54,7 +73,7 @@ Store executable helper scripts that make the skill reliable and repeatable. For
 
 `skills/<skill-name>/references/`
 
-Store deeper guidance that should be loaded only when needed. For `crawl-web-text`, this should cover extraction policy, polite crawling, content cleanup rules, output formats, and failure modes.
+Store deeper guidance that should be loaded only when needed. For example, `crawl-web-text` keeps extraction policy there, while `github-publisher` keeps publishing workflow and troubleshooting notes there.
 
 `skills/<skill-name>/assets/`
 
@@ -120,14 +139,12 @@ skill folder. Put repository-level documentation in `docs/` or the root README.
 5. Update this plan only if the repository structure changes.
 6. Run the skill validation and any relevant tests.
 
-## Current Implementation
+## Publishing Preparation
 
-The initial `crawl-web-text/` scaffold has been moved under `skills/crawl-web-text/`.
+Before publishing or tagging a release:
 
-Implementation should proceed in this order:
-
-1. Write `skills/crawl-web-text/SKILL.md`.
-2. Add `skills/crawl-web-text/scripts/extract_web_text.py`.
-3. Add `skills/crawl-web-text/references/extraction-guidelines.md`.
-4. Add lightweight tests under `tests/crawl-web-text/`.
-5. Add root `README.md`, `LICENSE`, and `tools/validate_skills.sh` when preparing the repository for publication.
+1. Run `python3 tools/run_tests.py`.
+2. Run `python3 tools/validate_skills.py`.
+3. Review `git status --short` and `git diff`.
+4. Confirm that no skill folder contains README, changelog, generated caches, or unrelated notes.
+5. Keep release notes and repository-wide process docs outside individual skill folders unless they are direct bundled references for a specific skill.
