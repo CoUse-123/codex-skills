@@ -11,7 +11,7 @@ Use this workflow when preparing this repository for GitHub publication, branch 
 5. Run:
 
 ```bash
-python3 -m unittest discover -s tests -v
+python3 tools/run_tests.py
 python3 tools/validate_skills.py
 ```
 

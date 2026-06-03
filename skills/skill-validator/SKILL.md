@@ -20,7 +20,7 @@ Validate this repository's skill folders without network access or third-party p
 
 ```bash
 python3 tools/validate_skills.py
-python3 -m unittest discover -s tests -v
+python3 tools/run_tests.py
 ```
 
 Validate one skill:

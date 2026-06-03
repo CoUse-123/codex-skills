@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Text Extractor"
+  short_description: "Extract page text and tables from PDFs"
+  default_prompt: "Use $pdf-text-extractor to extract Markdown or JSON text from a PDF."

@@ -15,13 +15,13 @@ the skill packages.
 │   └── folder-plan.md
 ├── skills/
 │   ├── crawl-web-text/
-│       ├── SKILL.md
-│       ├── agents/
-│       │   └── openai.yaml
-│       ├── scripts/
-│       │   └── extract_web_text.py
-│       └── references/
-│           └── extraction-guidelines.md
+│   │   ├── SKILL.md
+│   │   ├── agents/
+│   │   │   └── openai.yaml
+│   │   ├── scripts/
+│   │   │   └── extract_web_text.py
+│   │   └── references/
+│   │       └── extraction-guidelines.md
 │   ├── skill-scaffolder/
 │   │   ├── SKILL.md
 │   │   ├── agents/openai.yaml
@@ -30,23 +30,39 @@ the skill packages.
 │   │   ├── SKILL.md
 │   │   ├── agents/openai.yaml
 │   │   └── scripts/validate_skills.py
-│   └── github-publisher/
+│   ├── github-publisher/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   └── references/
+│   │       ├── publish-workflow.md
+│   │       └── troubleshooting.md
+│   ├── pdf-text-extractor/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   ├── scripts/extract_pdf_text.py
+│   │   └── references/pdf-extraction-guidelines.md
+│   └── docx-brief-maker/
 │       ├── SKILL.md
 │       ├── agents/openai.yaml
-│       └── references/
-│           ├── publish-workflow.md
-│           └── troubleshooting.md
+│       ├── scripts/extract_docx_brief.py
+│       └── references/brief-guidelines.md
 ├── tests/
 │   ├── crawl-web-text/
-│       ├── fixtures/
-│       │   └── sample-page.html
-│       └── test_extract_web_text.py
+│   │   ├── fixtures/
+│   │   │   └── sample-page.html
+│   │   └── test_extract_web_text.py
 │   ├── skill-scaffolder/
 │   │   └── test_scaffold_skill.py
 │   ├── skill-validator/
 │   │   └── test_validate_skills.py
-│   └── github-publisher/
-│       └── test_github_publisher.py
+│   ├── github-publisher/
+│   │   └── test_github_publisher.py
+│   ├── pdf-text-extractor/
+│   │   ├── fixtures/sample.pdf
+│   │   └── test_pdf_text_extractor.py
+│   └── docx-brief-maker/
+│       ├── fixtures/document.xml
+│       └── test_docx_brief_maker.py
 └── tools/
     ├── run_tests.py
     ├── validate_skills.py

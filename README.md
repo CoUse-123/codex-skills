@@ -31,6 +31,8 @@ See `docs/folder-plan.md` for the long-term repository structure.
 - `skill-scaffolder`: Generate standard skill folders, metadata, optional resource directories, and repository-level tests.
 - `skill-validator`: Validate all repository skills offline against naming, frontmatter, metadata, script, and test-layout conventions.
 - `github-publisher`: Follow a careful GitHub publishing workflow for this repository, including status checks, auth, proxy, push, and release-note troubleshooting.
+- `pdf-text-extractor`: Extract PDF page text, simple tables, metadata, and OCR-needed warnings as Markdown or JSON.
+- `docx-brief-maker`: Extract Word docx structure and generate rule-based briefs with action items, risks, and suggested edits.
 
 ## Validation
 

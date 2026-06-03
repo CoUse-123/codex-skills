@@ -1,0 +1,4 @@
+interface:
+  display_name: "DOCX Brief Maker"
+  short_description: "Create structured briefs from Word documents"
+  default_prompt: "Use $docx-brief-maker to extract a structured brief from a Word docx file."

@@ -49,5 +49,5 @@ After scaffolding, run:
 
 ```bash
 python3 tools/validate_skills.py
-python3 -m unittest discover -s tests -v
+python3 tools/run_tests.py
 ```
